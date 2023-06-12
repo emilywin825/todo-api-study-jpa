@@ -17,10 +17,11 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/api/todos")
-@CrossOrigin(origins="http://localhost:3000") //3000번 포트에서 요청보내면 받아줌. localhos:3000만 우리 서버에 들어올 수 있음
+//@CrossOrigin(origins="http://localhost:3000") //3000번 포트에서 요청보내면 받아줌. localhos:3000만 우리 서버에 들어올 수 있음
 public class TodoController {
 
     private final TodoService todoService;
+
     // 할 일 등록 요청
     @PostMapping
     public ResponseEntity<?> createTodo(

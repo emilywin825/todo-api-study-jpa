@@ -18,7 +18,7 @@ public class WebSecurityConfig {
     }
 
 
-    //시큐리티 설정
+    // 시큐리티 설정
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
