@@ -38,6 +38,7 @@ public class User {
     private LocalDateTime joinDate;
 
     @Enumerated(EnumType.STRING)
-    @ColumnDefault("'COMMON'") // enum은 반드시 ''로 감싸주어야 함.
-    private Role role; //유저 권한을 설정
+//    @ColumnDefault("'COMMON'") // enum은 반드시 ''로 감싸주어야 함.
+    @Builder.Default
+    private Role role = Role.COMMON; // 유저 권한을 설정
 }

@@ -8,7 +8,6 @@ import com.example.todo.userapi.dto.response.LoginResponseDTO;
 import com.example.todo.userapi.dto.response.UserSignUpResponseDTO;
 import com.example.todo.userapi.service.UserService;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -68,20 +67,24 @@ public class UserController {
 
     }
 
-    //로그인 요청 처리
+    // 로그인 요청 처리
     @PostMapping("/signin")
     public ResponseEntity<?> signIn(
             @Validated @RequestBody LoginRequestDTO dto
-        ){
+    ) {
         try {
-            LoginResponseDTO responseDTO=userService.authenticate(dto);
+            LoginResponseDTO responseDTO
+                    = userService.authenticate(dto);
 
             return ResponseEntity.ok().body(responseDTO);
-        } catch (Exception e){
-            
+
+        } catch (Exception e) {
+
             e.printStackTrace();
-            return ResponseEntity.badRequest()
-                    .body(e.getMessage()); //400이 뜨면 클라에게 이 메시지가 전송됨
+            return ResponseEntity
+                    .badRequest()
+                    .body(e.getMessage());
         }
     }
+
 }

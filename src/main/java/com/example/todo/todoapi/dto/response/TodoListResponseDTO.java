@@ -1,5 +1,6 @@
 package com.example.todo.todoapi.dto.response;
 
+import com.example.todo.userapi.entity.User;
 import lombok.*;
 
 import java.util.List;
