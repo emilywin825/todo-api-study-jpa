@@ -41,4 +41,6 @@ public class User {
 //    @ColumnDefault("'COMMON'") // enum은 반드시 ''로 감싸주어야 함.
     @Builder.Default
     private Role role = Role.COMMON; // 유저 권한을 설정
+
+    private String profileImg;
 }

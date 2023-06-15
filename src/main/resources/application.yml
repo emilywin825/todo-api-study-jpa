@@ -20,6 +20,10 @@ spring:
       hibernate:
         format_sql: true # sql을 줄바꿈해서 이쁘게 출력
     database: mysql # 디비 계열 설정
+  servlet:
+    multipart:
+      max-file-size: 10MB #1개의 파일의 최대 사이즈
+      max-request-size: 20MB #전체 요청의 최대 사이즈
 
 logging.level:
   org.hibernate.SQL: debug
@@ -32,5 +36,8 @@ springdoc:
 jwt:
   secret: F/CV/ULHRY82H0WBcFrYiFpODVih3runoSp05iVkAlV+FThQHtMEWwgnvqj4sZFQN3CPRNrGzCyevxqSjqcM1g==
 
+#업로드파일 저장 경로
+upload:
+  path: D:/todo_upload
 
 

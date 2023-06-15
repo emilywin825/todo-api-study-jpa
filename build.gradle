@@ -44,6 +44,8 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt-impl:0.11.2'
 	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.2'
 
+	//파일업로드 라이브러리
+	implementation 'commons-io:commons-io:2.8.0'
 }
 
 tasks.named('test') {
